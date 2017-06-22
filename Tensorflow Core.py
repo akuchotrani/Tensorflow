@@ -46,3 +46,9 @@ sess.run(init)
 
 print(sess.run(linear_model,{x:[1,2,3,4]}))
 
+#predicting how well is our model. Using squared distance delta method
+y = tf.placeholder(tf.float32)
+squared_deltas = tf.square(linear_model - y)
+loss = tf.reduce_sum(squared_deltas)
+print(sess.run(loss,{x:[1,2,3,4],y:[0,3,6,15]}))
+
