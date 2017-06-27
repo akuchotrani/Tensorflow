@@ -62,3 +62,5 @@ In machine learning we typically define what it means for a model to be bad. We 
 and it represents how far off our model is from our desired outcome. We try to minimize that error, and the smaller the error margin, 
 the better our model is.
 CROSS-ENTROPY : is measuring how inefficient our predictions are for describing the truth
+
+Using small batches of random data is called stochastic training -- in this case, stochastic gradient descent
