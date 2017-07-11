@@ -39,10 +39,10 @@ def neural_network_model(data):
     l1 = tf.nn.relu(l1)#rectified linear is activation function applied to layer 1
     
     l2 = tf.add(tf.matmul(l1,hidden_2_layer['weights']),hidden_2_layer['biases'])#input goes through the sum box
-    l2 = tf.nn.relu(l1)#rectified linear is activation function applied to layer 1
+    l2 = tf.nn.relu(l1)#rectified linear is activation function applied to layer 2
     
     l3 = tf.add(tf.matmul(l2,hidden_3_layer['weights']),hidden_3_layer['biases'])#input goes through the sum box
-    l3 = tf.nn.relu(l3)#rectified linear is activation function applied to layer 1
+    l3 = tf.nn.relu(l3)#rectified linear is activation function applied to layer 3
     
     
     output = tf.matmul(l3,output_layer['weights']) + output_layer['biases']
